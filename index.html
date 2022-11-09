@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator UI</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="number" id="value1">
+
+        <select name="operation">
+            <option value="add" id="add">+</option>
+            <option value="sub" id="sub">-</option>
+            <option value="multi" id="multi">*</option>
+            <option value="divide" id="divide">/</option>
+        </select>
+
+        <input type="number" id="value2">
+
+        <button id="result_btn">=</button>
+        <div id="result_block" style="background-color: red ;"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
