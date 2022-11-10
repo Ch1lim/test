@@ -1,33 +1,24 @@
-const NUMBER = {
-    value1: document.getElementById("value1").value,
-    value2: document.getElementById("value2").value,
-    result: document.getElementById("result"),
-}
-
-const OPERATION = {
-    divide: (value1 / value2),
-    multi: (value1 * value2),
-    sub: (value1 - value2),
-    add: (value1 + value2),
-}
-
-let result;
-
-document.getElementById("divide").onclick = function(){
-    result = OPERATION.divide;
-};
-document.getElementById("multi").onclick = function(){
-    result = OPERATION.multi;
-};
-document.getElementById("sub").onclick = function(){
-    result = OPERATION.sub;
-};
-document.getElementById("add").onclick = function(){
-    result = OPERATION.add;
-};
-
 document.getElementById("result_btn").onclick = function(){
-    document.getElementById("result_block").innerHTML = result;
+    let num1 = Number(document.getElementById("value1").value);
+    let num2 = Number(document.getElementById("value2").value);
+    let operator = document.getElementById("operation").value;
+    let result = 0;
+    switch (operator) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "/":
+            result = num1 / num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+    }
+
+    document.getElementById("result_block").innerHTML = Number(result.toFixed(14));
 };
 
 
