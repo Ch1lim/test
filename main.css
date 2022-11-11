@@ -1,6 +1,8 @@
 .calculator {
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
+    justify-content: center;
     top: 50%;
     right: 35%;
 }
@@ -18,4 +20,11 @@ select, button {
     min-width: 95px;
     margin-left: 8px;
     
+}
+
+.list_output {
+    position: absolute;
+    top: 55%;
+    right: 50%;
+    margin-top: 10px;
 }
